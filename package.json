@@ -1,0 +1,56 @@
+{
+  "name": "@narutomanchesterh/v2-sdk",
+  "description": "🛠 An SDK for building applications on top of Clober V2",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "typings": "./dist/types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/narutomanchester/v2-sdk.git"
+  },
+  "scripts": {
+    "lint": "eslint --ext .ts src --fix",
+    "docs": "typedoc --out docs src/index.ts --sort kind",
+    "test": "vitest --root test --config vitest.config.ts --max-concurrency=0",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && npm install . && npm run build:cjs && npm run build:esm && npm run build:types",
+    "build:cjs": "tsc --project tsconfig.build.json --module commonjs --outDir ./dist/cjs --removeComments && printf '{\"type\":\"commonjs\"}' > ./dist/cjs/package.json",
+    "build:esm": "tsc --project tsconfig.build.json --module es2015 --outDir ./dist/esm && printf '{\"type\": \"module\",\"sideEffects\":false}' > ./dist/esm/package.json",
+    "build:types": "tsc --project tsconfig.build.json --module esnext --outDir ./dist/types --declarationDir ./dist/types --emitDeclarationOnly --declaration --declarationMap"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "@viem/anvil": "^0.0.9",
+    "dotenv": "^16.4.5",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.3",
+    "typedoc": "^0.25.12",
+    "typescript": "^5.4.3",
+    "vitest": "^1.4.0"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "bignumber.js": "^9.1.2",
+    "viem": "^2.9.6"
+  },
+  "version": "1.0.0",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/narutomanchester/v2-sdk/issues"
+  },
+  "homepage": "https://github.com/narutomanchester/v2-sdk#readme"
+}
