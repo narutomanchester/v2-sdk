@@ -2,7 +2,7 @@ import { createWalletClient, http, parseUnits } from 'viem'
 import { arbitrumSepolia } from 'viem/chains'
 import { privateKeyToAccount } from 'viem/accounts'
 import * as dotenv from 'dotenv'
-import { getMarket, getOpenOrders, limitOrder } from 'narutomanchester/v2-sdk'
+import { getMarket, getOpenOrders, limitOrder } from '@narutomanchesterh/v2-sdk'
 
 dotenv.config()
 

@@ -7,7 +7,7 @@ import {
   claimOrders,
   getOpenOrders,
   setApprovalOfOpenOrdersForAll,
-} from 'narutomanchester/v2-sdk'
+} from '@narutomanchesterh/v2-sdk'
 
 dotenv.config()
 
