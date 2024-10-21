@@ -17,7 +17,7 @@ import { fetchCurrency } from './utils/currency'
  * @param {string} options.rpcUrl The RPC URL to use for executing the transaction.
  * @returns {Promise<`0x${string}` | undefined>} Promise resolving to the transaction hash. If the account is already approved for all, the promise resolves to `undefined`.
  * @example
- * import { setApprovalOfOpenOrdersForAll } from '@clober/v2-sdk'
+ * import { setApprovalOfOpenOrdersForAll } from 'narutomanchester/v2-sdk'
  * import { mnemonicToAccount } from 'viem/accounts'
  *
  * const walletClient = createWalletClient({
@@ -96,7 +96,7 @@ export const setApprovalOfOpenOrdersForAll = async ({
  * @param options.rpcUrl The RPC URL of the blockchain.
  * @returns {Promise<`0x${string}` | undefined>} Promise resolving to the transaction hash. If the account is already approved, the promise resolves to `undefined`.
  * @example
- * import { approveERC20 } from '@clober/v2-sdk'
+ * import { approveERC20 } from 'narutomanchester/v2-sdk'
  *
  * const walletClient = createWalletClient({
  *   chain: arbitrumSepolia,

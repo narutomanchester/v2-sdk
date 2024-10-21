@@ -1,4 +1,4 @@
-# @clober/v2-sdk
+# narutomanchester/v2-sdk
 
 The Clober V2 SDK provides abstractions to assist you with interacting with the [Clober V2 smart contracts](https://github.com/clober-dex/v2-core) in a Typescript/Javascript environment (e.g. websites, node scripts). 
 
@@ -9,4 +9,4 @@ To begin, we recommend looking at our Guides which include [runnable examples](h
 
 ## Installation
 
-`npm install @clober/v2-sdk`
+`npm install narutomanchester/v2-sdk`

@@ -1,7 +1,7 @@
 import { expect, test } from 'vitest'
 import { createPublicClient, http } from 'viem'
 import { arbitrumSepolia } from 'viem/chains'
-import { getOpenOrders } from '@clober/v2-sdk'
+import { getOpenOrders } from 'narutomanchester/v2-sdk'
 
 import { fromOrderId } from '../src/utils/order'
 import { cloberTestChain } from '../src/constants/test-chain'

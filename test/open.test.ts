@@ -1,5 +1,5 @@
 import { expect, test, afterEach } from 'vitest'
-import { getMarket, getPool, openMarket, openPool } from '@clober/v2-sdk'
+import { getMarket, getPool, openMarket, openPool } from 'narutomanchester/v2-sdk'
 import { zeroHash } from 'viem'
 
 import { cloberTestChain } from '../src/constants/test-chain'

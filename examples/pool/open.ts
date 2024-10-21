@@ -2,7 +2,7 @@ import * as dotenv from 'dotenv'
 import { createWalletClient, http, parseUnits, zeroHash } from 'viem'
 import { arbitrumSepolia } from 'viem/chains'
 import { privateKeyToAccount } from 'viem/accounts'
-import { getPool, openPool } from '@clober/v2-sdk'
+import { getPool, openPool } from 'narutomanchester/v2-sdk'
 
 dotenv.config()
 

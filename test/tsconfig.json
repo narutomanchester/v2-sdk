@@ -6,7 +6,7 @@
     "lib": ["DOM"],
     "baseUrl": ".",
     "paths": {
-      "@clober/v2-sdk": ["../src/index.ts"]
+      "narutomanchester/v2-sdk": ["../src/index.ts"]
     },
   }
 }

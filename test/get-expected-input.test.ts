@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest'
-import { getExpectedInput, getMarket, toPrice } from '@clober/v2-sdk'
+import { getExpectedInput, getMarket, toPrice } from 'narutomanchester/v2-sdk'
 import {
   formatUnits,
   isAddressEqual,

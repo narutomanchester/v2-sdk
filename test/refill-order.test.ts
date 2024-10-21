@@ -7,7 +7,7 @@ import {
   marketOrder,
   refillOrder,
   setStrategyConfig,
-} from '@clober/v2-sdk'
+} from 'narutomanchester/v2-sdk'
 import { zeroHash } from 'viem'
 
 import { cloberTestChain2 } from '../src/constants/test-chain'

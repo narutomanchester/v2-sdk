@@ -7,7 +7,7 @@ import {
   claimOrders,
   getOpenOrders,
   setApprovalOfOpenOrdersForAll,
-} from '@clober/v2-sdk'
+} from 'narutomanchester/v2-sdk'
 
 dotenv.config()
 

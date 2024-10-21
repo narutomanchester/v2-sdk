@@ -9,7 +9,7 @@ import {
   getOpenOrders,
   limitOrder,
   setApprovalOfOpenOrdersForAll,
-} from '@clober/v2-sdk'
+} from 'narutomanchester/v2-sdk'
 import { getAddress } from 'viem'
 
 import { cloberTestChain } from '../src/constants/test-chain'

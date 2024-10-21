@@ -3,7 +3,7 @@ import {
   CHART_LOG_INTERVALS,
   getChartLogs,
   getLatestChartLog,
-} from '@clober/v2-sdk'
+} from 'narutomanchester/v2-sdk'
 import { arbitrumSepolia } from 'viem/chains'
 
 test('check chart functions', async () => {

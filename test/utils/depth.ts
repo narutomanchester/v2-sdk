@@ -1,4 +1,4 @@
-import { Depth } from '@clober/v2-sdk'
+import { Depth } from 'narutomanchester/v2-sdk'
 import BigNumber from 'bignumber.js'
 
 export const getSize = (depth: Depth[], from: number, to: number) => {

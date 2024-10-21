@@ -8,7 +8,7 @@ import {
   quoteToBase,
   getPriceNeighborhood,
   getMarketPrice,
-} from '@clober/v2-sdk'
+} from 'narutomanchester/v2-sdk'
 
 import { FORK_URL } from './utils/constants'
 

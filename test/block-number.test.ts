@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest'
-import { getSubgraphBlockNumber } from '@clober/v2-sdk'
+import { getSubgraphBlockNumber } from 'narutomanchester/v2-sdk'
 import { base } from 'viem/chains'
 
 test('check latest subgraph block number functions', async () => {

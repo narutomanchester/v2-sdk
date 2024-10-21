@@ -1,5 +1,5 @@
 import { expect, beforeEach, test } from 'vitest'
-import { addLiquidity, getPool, removeLiquidity } from '@clober/v2-sdk'
+import { addLiquidity, getPool, removeLiquidity } from 'narutomanchester/v2-sdk'
 import { formatUnits, zeroHash } from 'viem'
 
 import { cloberTestChain } from '../src/constants/test-chain'

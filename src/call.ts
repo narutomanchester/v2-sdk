@@ -57,7 +57,7 @@ import { STRATEGY_ABI } from './abis/rebalancer/strategy-abi'
  * @param options {@link DefaultWriteContractOptions} options.
  * @returns A Promise resolving to a transaction object. If the market is already open, returns undefined.
  * @example
- * import { openMarket } from '@clober/v2-sdk'
+ * import { openMarket } from 'narutomanchester/v2-sdk'
  *
  * const transaction = await openMarket({
  *   chainId: 421614,
@@ -153,7 +153,7 @@ export const openMarket = async ({
  * @returns {Promise<{ transaction: Transaction, result: { make: CurrencyFlow, take: CurrencyFlow, spent: CurrencyFlow }>}
  * Promise resolving to the transaction object representing the limit order with the result of the order.
  * @example
- * import { limitOrder } from '@clober/v2-sdk'
+ * import { limitOrder } from 'narutomanchester/v2-sdk'
  * import { privateKeyToAccount } from 'viem/accounts'
  *
  * const { transaction } = await limitOrder({
@@ -166,7 +166,7 @@ export const openMarket = async ({
  * })
  *
  * @example
- * import { limitOrder } from '@clober/v2-sdk'
+ * import { limitOrder } from 'narutomanchester/v2-sdk'
  *
  * const { transaction } = await limitOrder({
  *   chainId: 421614,
@@ -242,7 +242,7 @@ export const limitOrder = async ({
   ) {
     throw new Error(`
        Open the market before placing a limit order.
-       import { openMarket } from '@clober/v2-sdk'
+       import { openMarket } from 'narutomanchester/v2-sdk'
 
        const transaction = await openMarket({
             chainId: ${chainId},
@@ -441,7 +441,7 @@ export const limitOrder = async ({
  * @returns {Promise<{ transaction: Transaction, result: { spent: CurrencyFlow, taken: CurrencyFlow } }>}
  * Promise resolving to the transaction object representing the market order with the result of the order.
  * @example
- * import { marketOrder } from '@clober/v2-sdk'
+ * import { marketOrder } from 'narutomanchester/v2-sdk'
  * import { privateKeyToAccount } from 'viem/accounts'
  *
  * const transaction = await marketOrder({
@@ -518,7 +518,7 @@ export const marketOrder = async ({
   ) {
     throw new Error(`
        Open the market before placing a market order.
-       import { openMarket } from '@clober/v2-sdk'
+       import { openMarket } from 'narutomanchester/v2-sdk'
 
        const transaction = await openMarket(
             ${chainId},
@@ -685,7 +685,7 @@ export const marketOrder = async ({
  * Promise resolving to the transaction object representing the claim action with the result of the order.
  * @throws {Error} Throws an error if no open orders are found for the specified user.
  * @example
- * import { getOpenOrders, claimOrders } from '@clober/v2-sdk'
+ * import { getOpenOrders, claimOrders } from 'narutomanchester/v2-sdk'
  *
  * const openOrders = await getOpenOrders({
  *     chainId: 421614,
@@ -734,7 +734,7 @@ export const claimOrder = async ({
  * Promise resolving to the transaction object representing the claim action with the result of the orders.
  * @throws {Error} Throws an error if no open orders are found for the specified user.
  * @example
- * import { getOpenOrders, claimOrders } from '@clober/v2-sdk'
+ * import { getOpenOrders, claimOrders } from 'narutomanchester/v2-sdk'
  *
  * const openOrders = await getOpenOrders({
  *     chainId: 421614,
@@ -771,7 +771,7 @@ export const claimOrders = async ({
   if (!isApprovedForAll) {
     throw new Error(`
        Set ApprovalForAll before calling this function.
-       import { setApprovalOfOpenOrdersForAll } from '@clober/v2-sdk'
+       import { setApprovalOfOpenOrdersForAll } from 'narutomanchester/v2-sdk'
 
        const hash = await setApprovalOfOpenOrdersForAll({
             chainId: ${chainId},
@@ -846,7 +846,7 @@ export const claimOrders = async ({
  * Promise resolving to the transaction object representing the cancel action with the result of the order.
  * @throws {Error} Throws an error if no open orders are found for the specified user.
  * @example
- * import { getOpenOrders, cancelOrders } from '@clober/v2-sdk'
+ * import { getOpenOrders, cancelOrders } from 'narutomanchester/v2-sdk'
  *
  * const openOrders = await getOpenOrders({
  *     chainId: 421614,
@@ -895,7 +895,7 @@ export const cancelOrder = async ({
  * Promise resolving to the transaction object representing the cancel action with the result of the orders.
  * @throws {Error} Throws an error if no open orders are found for the specified user.
  * @example
- * import { getOpenOrders, cancelOrders } from '@clober/v2-sdk'
+ * import { getOpenOrders, cancelOrders } from 'narutomanchester/v2-sdk'
  *
  * const openOrders = await getOpenOrders({
  *     chainId: 421614,
@@ -932,7 +932,7 @@ export const cancelOrders = async ({
   if (!isApprovedForAll) {
     throw new Error(`
        Set ApprovalForAll before calling this function.
-       import { setApprovalOfOpenOrdersForAll } from '@clober/v2-sdk'
+       import { setApprovalOfOpenOrdersForAll } from 'narutomanchester/v2-sdk'
 
        const hash = await setApprovalOfOpenOrdersForAll({
             chainId: ${chainId},
@@ -1006,7 +1006,7 @@ export const cancelOrders = async ({
  * @param options {@link DefaultWriteContractOptions} options.
  * @returns A Promise resolving to a transaction object. If the market is already open, returns undefined.
  * @example
- * import { openPool } from '@clober/v2-sdk'
+ * import { openPool } from 'narutomanchester/v2-sdk'
  *
  * const transaction = await openPool({
  *   chainId: 421614,
@@ -1133,7 +1133,7 @@ export const addLiquidity = async ({
   if (!pool.isOpened) {
     throw new Error(`
        Open the pool before adding liquidity.
-       import { openPool } from '@clober/v2-sdk'
+       import { openPool } from 'narutomanchester/v2-sdk'
 
        const transaction = await openPool({
             chainId: ${chainId},
@@ -1391,7 +1391,7 @@ export const removeLiquidity = async ({
   if (!pool.isOpened) {
     throw new Error(`
        Open the pool before removing liquidity.
-       import { openPool } from '@clober/v2-sdk'
+       import { openPool } from 'narutomanchester/v2-sdk'
 
        const transaction = await openPool({
             chainId: ${chainId},
@@ -1508,7 +1508,7 @@ export const refillOrder = async ({
   if (!pool.isOpened) {
     throw new Error(`
        Open the pool before rebalancing pool.
-       import { openPool } from '@clober/v2-sdk'
+       import { openPool } from 'narutomanchester/v2-sdk'
 
        const transaction = await openPool({
             chainId: ${chainId},
@@ -1591,7 +1591,7 @@ export const adjustOrderPrice = async ({
   if (!pool.isOpened) {
     throw new Error(`
        Open the pool before updating strategy price.
-       import { openPool } from '@clober/v2-sdk'
+       import { openPool } from 'narutomanchester/v2-sdk'
 
        const transaction = await openPool({
             chainId: ${chainId},
@@ -1738,7 +1738,7 @@ export const setStrategyConfig = async ({
   if (!pool.isOpened) {
     throw new Error(`
        Open the pool before set strategy config.
-       import { openPool } from '@clober/v2-sdk'
+       import { openPool } from 'narutomanchester/v2-sdk'
 
        const transaction = await openPool({
             chainId: ${chainId},
@@ -1808,7 +1808,7 @@ export const pausePool = async ({
   if (!pool.isOpened) {
     throw new Error(`
        Open the pool before trying pause.
-       import { openPool } from '@clober/v2-sdk'
+       import { openPool } from 'narutomanchester/v2-sdk'
 
        const transaction = await openPool({
             chainId: ${chainId},
@@ -1874,7 +1874,7 @@ export const resumePool = async ({
   if (!pool.isOpened) {
     throw new Error(`
        Open the pool before trying resume.
-       import { openPool } from '@clober/v2-sdk'
+       import { openPool } from 'narutomanchester/v2-sdk'
 
        const transaction = await openPool({
             chainId: ${chainId},

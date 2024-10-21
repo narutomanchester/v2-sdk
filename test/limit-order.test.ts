@@ -1,5 +1,5 @@
 import { expect, test, afterEach } from 'vitest'
-import { approveERC20, getMarket, limitOrder, openMarket } from '@clober/v2-sdk'
+import { approveERC20, getMarket, limitOrder, openMarket } from 'narutomanchester/v2-sdk'
 import { arbitrumSepolia } from 'viem/chains'
 import { getAddress } from 'viem'
 

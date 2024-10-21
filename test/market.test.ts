@@ -1,7 +1,7 @@
 import { expect, test } from 'vitest'
 import { arbitrumSepolia } from 'viem/chains'
 import { getAddress } from 'viem'
-import { getMarket, getQuoteToken } from '@clober/v2-sdk'
+import { getMarket, getQuoteToken } from 'narutomanchester/v2-sdk'
 
 import { cloberTestChain } from '../src/constants/test-chain'
 

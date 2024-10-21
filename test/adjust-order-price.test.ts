@@ -4,7 +4,7 @@ import {
   adjustOrderPrice,
   getPool,
   setStrategyConfig,
-} from '@clober/v2-sdk'
+} from 'narutomanchester/v2-sdk'
 import { zeroHash } from 'viem'
 import BigNumber from 'bignumber.js'
 

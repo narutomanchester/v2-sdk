@@ -37,7 +37,7 @@ import { Subgraph } from './constants/subgraph'
  * @returns Contract addresses
  *
  * @example
- * import { getContractAddresses } from '@clober/v2-sdk'
+ * import { getContractAddresses } from 'narutomanchester/v2-sdk'
  *
  * const addresses = await getContractAddresses({
  *   chainId: 421614,
@@ -53,7 +53,7 @@ export const getContractAddresses = ({ chainId }: { chainId: CHAIN_IDS }) => {
  * @returns Contract addresses
  *
  * @example
- * import { getContractAddresses } from '@clober/v2-sdk'
+ * import { getContractAddresses } from 'narutomanchester/v2-sdk'
  *
  * const blockNumber = await getSubgraphBlockNumber({
  *   chainId: 421614,
@@ -93,7 +93,7 @@ export const getSubgraphBlockNumber = async ({
  * @returns A market {@link Market}
  *
  * @example
- * import { getMarket } from '@clober/v2-sdk'
+ * import { getMarket } from 'narutomanchester/v2-sdk'
  *
  * const market = await getMarket({
  *   chainId: 421614,
@@ -143,7 +143,7 @@ export const getMarket = async ({
  * @returns A pool {@link Pool}
  *
  * @example
- * import { getPool } from '@clober/v2-sdk'
+ * import { getPool } from 'narutomanchester/v2-sdk'
  *
  * const market = await getPool({
  *   chainId: 421614,
@@ -499,7 +499,7 @@ export const getPriceNeighborhood = ({
  * @param options.roundingUpTakenAsk Whether to round up the taken ask.
  * @returns A Promise resolving to an object containing the taken amount, spend amount and result of the calculation.
  * @example
- * import { getExpectedOutput } from '@clober/v2-sdk'
+ * import { getExpectedOutput } from 'narutomanchester/v2-sdk'
  *
  * const { takenAmount, spentAmount } = await getExpectedOutput({
  *   chainId: 421614,
@@ -617,7 +617,7 @@ export const getExpectedOutput = async ({
  * @param options.useSubgraph Whether to use the subgraph to fetch the market data.
  * @returns A Promise resolving to an object containing the taken amount, spent amount and result of the calculation.
  * @example
- * import { getExpectedInput } from '@clober/v2-sdk'
+ * import { getExpectedInput } from 'narutomanchester/v2-sdk'
  *
  * const { takenAmount, spentAmount } = await getExpectedInput({
  *   chainId: 421614,
@@ -723,7 +723,7 @@ export const getExpectedInput = async ({
  * @param options {@link DefaultReadContractOptions} options.
  * @returns {Promise<OpenOrder>} Promise resolving to the open order object, or undefined if not found.
  * @example
- * import { getOpenOrder } from '@clober/v2-sdk'
+ * import { getOpenOrder } from 'narutomanchester/v2-sdk'
  *
  * const openOrder = await getOpenOrder({
  *   chainId: 421614,
@@ -753,7 +753,7 @@ export const getOpenOrder = async ({
  * @param options {@link DefaultReadContractOptions} options.
  * @returns {Promise<OpenOrder[]>} Promise resolving to an array of open orders.
  * @example
- * import { getOpenOrders } from '@clober/v2-sdk'
+ * import { getOpenOrders } from 'narutomanchester/v2-sdk'
  *
  * const openOrders = await getOpenOrders({
  *   chainId: 421614,
@@ -785,7 +785,7 @@ export const getOpenOrders = async ({
  * @returns {Promise<ChartLog>} A promise that resolves with the latest chart log.
  *
  * @example
- * import { getLatestChartLog } from '@clober/v2-sdk'
+ * import { getLatestChartLog } from 'narutomanchester/v2-sdk'
  *
  * const logs = await getLatestChartLog({
  *   chainId: 421614,
@@ -817,7 +817,7 @@ export const getLatestChartLog = async ({
  * @returns {Promise<ChartLog[]>} A promise that resolves with an array of chart logs within the specified interval.
  *
  * @example
- * import { getLatestChartLog, CHART_LOG_INTERVALS } from '@clober/v2-sdk'
+ * import { getLatestChartLog, CHART_LOG_INTERVALS } from 'narutomanchester/v2-sdk'
  *
  * const logs = await getChartLogs({
  *   chainId: 421614,
@@ -856,7 +856,7 @@ export const getChartLogs = async ({
  * @returns {string} The address of the quote token.
  *
  * @example
- * import { getQuoteToken } from '@clober/v2-sdk'
+ * import { getQuoteToken } from 'narutomanchester/v2-sdk'
  *
  * const quote = await getQuoteToken({
  *   chainId: 421614,
