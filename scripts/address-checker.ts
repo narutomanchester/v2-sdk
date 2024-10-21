@@ -40,42 +40,11 @@ const parseDeployedAddressFromGithubSourceCode = async (
 }
 
 const fetchLatestContractAddresses = async (chainId: string) => {
-  if (chainId === '324') {
-    const [bookManagerAddress, controllerAddress, bookViewerAddress] =
-      await Promise.all([
-        parseZkDeployedAddressFromGithubSourceCode(
-          `${CORE_DEPLOYMENT_URL}-zk/${chainId}/src/BookManager.sol/BookManager.json`,
-        ),
-        parseZkDeployedAddressFromGithubSourceCode(
-          `${PERIPHERY_DEPLOYMENT_URL}-zk/${chainId}/src/Controller.sol/Controller.json`,
-        ),
-        parseZkDeployedAddressFromGithubSourceCode(
-          `${PERIPHERY_DEPLOYMENT_URL}-zk/${chainId}/src/BookViewer.sol/BookViewer.json`,
-        ),
-      ])
-    return {
-      bookManagerAddress: getAddress(bookManagerAddress),
-      controllerAddress: getAddress(controllerAddress),
-      bookViewerAddress: getAddress(bookViewerAddress),
-    }
-  } else {
-    const [bookManagerAddress, controllerAddress, bookViewerAddress] =
-      await Promise.all([
-        parseDeployedAddressFromGithubSourceCode(
-          `${CORE_DEPLOYMENT_URL}/${chainId}/BookManager.json`,
-        ),
-        parseDeployedAddressFromGithubSourceCode(
-          `${PERIPHERY_DEPLOYMENT_URL}/${chainId}/Controller.json`,
-        ),
-        parseDeployedAddressFromGithubSourceCode(
-          `${PERIPHERY_DEPLOYMENT_URL}/${chainId}/BookViewer.json`,
-        ),
-      ])
-    return {
-      bookManagerAddress: getAddress(bookManagerAddress),
-      controllerAddress: getAddress(controllerAddress),
-      bookViewerAddress: getAddress(bookViewerAddress),
-    }
+  
+  return {
+    bookManagerAddress: getAddress("0x96bB289E6BC3B171c86d51B4e5fE03A577e9a4aA"),
+    controllerAddress: getAddress("0x335c6f99379d2bcb0CbC170149c75a25A2fda5d1"),
+    bookViewerAddress: getAddress("0x6Aba77e7CdC65623F6f22937958D355c73aF3d35"),
   }
 }
 
